@@ -92,12 +92,12 @@ img { max-width: 100%; height: auto; }
 .green { color: var(--primary); }
 
 /* Logo clair / sombre */
-img.logo-dark { display: none; }
-:root[data-theme="dark"] img.logo-light { display: none; }
-:root[data-theme="dark"] img.logo-dark { display: block; }
+img.logo-dark, img.when-dark { display: none; }
+:root[data-theme="dark"] img.logo-light, :root[data-theme="dark"] img.when-light { display: none; }
+:root[data-theme="dark"] img.logo-dark, :root[data-theme="dark"] img.when-dark { display: block; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) img.logo-light { display: none; }
-  :root:not([data-theme="light"]) img.logo-dark { display: block; }
+  :root:not([data-theme="light"]) img.logo-light, :root:not([data-theme="light"]) img.when-light { display: none; }
+  :root:not([data-theme="light"]) img.logo-dark, :root:not([data-theme="light"]) img.when-dark { display: block; }
 }
 
 /* Sélecteur de thème : automatique, clair, sombre */
@@ -202,3 +202,11 @@ img.logo-dark { display: none; }
 .site-footer img { height: 22px; width: auto; }
 .site-footer .grow { flex-grow: 1; }
 .site-footer a { color: var(--muted-foreground); }
+
+/* Captures de l'application */
+.shot { margin: 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--card); box-shadow: 0 24px 60px rgba(38, 42, 36, 0.10); }
+.shot img { display: block; width: 100%; height: auto; }
+.shot img.when-dark { display: none; }
+.shots-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
+.shots-2 figure { margin: 0; }
+@media (max-width: 800px) { .shots-2 { grid-template-columns: minmax(0, 1fr); } }

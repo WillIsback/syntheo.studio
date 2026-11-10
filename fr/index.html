@@ -24,7 +24,7 @@
 <meta name="theme-color" content="#316745">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
 <script src="/assets/js/lang.js?v=2"></script>
 <script src="/assets/js/theme.js?v=2"></script>
 <script type="application/ld+json">
@@ -87,44 +87,11 @@
 </section>
 
 <section class="wrap preview" aria-label="Aperçu de l'application">
-  <div class="window">
-    <div class="window-bar" aria-hidden="true">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      <span class="title">Point hebdo RH · arrivées de novembre</span>
-    </div>
-    <div class="window-body">
-      <div class="note">
-        <div class="meta">mar. 29 oct. · 42 min · Claire M. · Mehdi B.</div>
-        <h2>Point hebdo RH · arrivées de novembre</h2>
-        <div class="legend">
-          <span><span class="sw sw-notes" aria-hidden="true"></span>Issu de vos notes</span>
-          <span><span class="sw sw-ai" aria-hidden="true"></span>Complété par Syntheo</span>
-        </div>
-        <h3>Décisions</h3>
-        <ul>
-          <li><span class="green">Accueil sur site décalé au jeudi 7 novembre</span>&#8239;: Claire réserve la salle et envoie l'ordre du jour d'ici lundi.</li>
-          <li><span class="green">Ordinateurs prêts</span> avant le premier jour&#8239;; la DSI a confirmé 4 postes sur 5, le cinquième arrive le 6.</li>
-        </ul>
-        <h3>Prochaines étapes</h3>
-        <ul>
-          <li>Mehdi envoie la liste des parrains aux chefs d'équipe (mercredi).</li>
-          <li>Claire rédige le courriel d'accueil et le fait circuler vendredi.</li>
-        </ul>
-      </div>
-      <aside class="margin-transcript" aria-label="Transcription en direct">
-        <span class="label">Transcription</span>
-        <p><strong>Claire</strong>On peut décaler l'accueil à jeudi&#8239;? La salle est prise mardi.</p>
-        <p><strong>Mehdi</strong>Jeudi, ça me va. J'envoie la liste des parrains avant.</p>
-        <p><strong>Claire</strong>Parfait, j'envoie l'ordre du jour lundi.</p>
-      </aside>
-    </div>
-    <div class="capsule" aria-hidden="true">
-      <span><span class="kanji">備</span>Préparer</span>
-      <span><span class="kanji">聴</span>Écouter</span>
-      <span class="on"><span class="kanji">結</span>Synthèse</span>
-    </div>
-  </div>
-  <p class="caption">Illustration d'une note terminée.</p>
+  <figure class="shot">
+    <img class="when-light" src="/assets/img/app-note-light.png" alt="Une note Syntheo terminée : décisions et prochaines étapes, avec en vert ce qui vient de vos notes et à l'encre ce que Syntheo a complété." width="1440" height="893">
+    <img class="when-dark" src="/assets/img/app-note-dark.png" alt="Une note Syntheo terminée : décisions et prochaines étapes, avec en vert ce qui vient de vos notes et à l'encre ce que Syntheo a complété." width="1440" height="893">
+  </figure>
+  <p class="caption">Une note terminée dans Syntheo 0.7 (interface en anglais). La réunion a été transcrite et résumée par des modèles qui tournent sur un serveur local.</p>
 </section>
 
 <section id="tea" class="tea section" aria-labelledby="tea-title">
@@ -173,6 +140,21 @@
       <h3>Synthèse</h3>
       <p>Vos notes deviennent le compte rendu. Ce qui vient de vos notes reste en vert, et ce que Syntheo ajoute s'écrit à l'encre&#8239;: vous voyez toujours qui a écrit quoi.</p>
     </div>
+  </div>
+</section>
+
+<section id="folders" class="wrap section" aria-labelledby="folders-title">
+  <h2 id="folders-title" class="section-title center">Chaque réunion reprend là où la précédente s'est arrêtée</h2>
+  <p class="intro center">Rangez vos notes dans des dossiers projet. Syntheo tient un fil rouge des décisions, des points ouverts et des tâches, et s'en sert pour proposer l'ordre du jour de la réunion suivante.</p>
+  <div class="shots-2">
+    <figure>
+      <div class="shot"><img src="/assets/img/app-home.png" alt="Écran d'accueil de Syntheo : démarrer une réunion, vos dossiers et les notes à reprendre." width="1440" height="893" loading="lazy"></div>
+      <figcaption class="caption">L'accueil : vos dossiers et les notes à reprendre.</figcaption>
+    </figure>
+    <figure>
+      <div class="shot"><img src="/assets/img/app-folder.png" alt="Un dossier projet dans Syntheo : le fil rouge avec les décisions, les points ouverts et les tâches, chacun relié à sa réunion." width="1440" height="822" loading="lazy"></div>
+      <figcaption class="caption">Un dossier projet et son fil rouge, tenu à jour par votre modèle local.</figcaption>
+    </figure>
   </div>
 </section>
 

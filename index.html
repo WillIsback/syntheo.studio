@@ -24,7 +24,7 @@
 <meta name="theme-color" content="#316745">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
 <script src="/assets/js/lang.js?v=2"></script>
 <script src="/assets/js/theme.js?v=2"></script>
 <script type="application/ld+json">
@@ -86,44 +86,11 @@
 </section>
 
 <section class="wrap preview" aria-label="Product preview">
-  <div class="window">
-    <div class="window-bar" aria-hidden="true">
-      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      <span class="title">Weekly HR sync · November onboarding</span>
-    </div>
-    <div class="window-body">
-      <div class="note">
-        <div class="meta">Tue 29 Oct · 42 min · Claire M. · Mehdi B.</div>
-        <h2>Weekly HR sync · November onboarding</h2>
-        <div class="legend">
-          <span><span class="sw sw-notes" aria-hidden="true"></span>From your notes</span>
-          <span><span class="sw sw-ai" aria-hidden="true"></span>Completed by Syntheo</span>
-        </div>
-        <h3>Decisions</h3>
-        <ul>
-          <li><span class="green">On-site welcome moved to Thursday 7 Nov</span>: Claire books the room and sends the agenda by Monday.</li>
-          <li><span class="green">Laptops ready</span> before day one; IT confirmed 4 of 5 machines, the fifth arrives on the 6th.</li>
-        </ul>
-        <h3>Next steps</h3>
-        <ul>
-          <li>Mehdi shares the buddy list with the team leads (Wed).</li>
-          <li>Claire drafts the welcome e-mail and circulates it Friday.</li>
-        </ul>
-      </div>
-      <aside class="margin-transcript" aria-label="Live transcript">
-        <span class="label">Transcript</span>
-        <p><strong>Claire</strong>Can we push the welcome to Thursday? The room is taken Tuesday.</p>
-        <p><strong>Mehdi</strong>Thursday works. I'll get the buddy list out before then.</p>
-        <p><strong>Claire</strong>Good, I'll send the agenda Monday.</p>
-      </aside>
-    </div>
-    <div class="capsule" aria-hidden="true">
-      <span><span class="kanji">備</span>Prepare</span>
-      <span><span class="kanji">聴</span>Listen</span>
-      <span class="on"><span class="kanji">結</span>Summary</span>
-    </div>
-  </div>
-  <p class="caption">Illustration of a finished note.</p>
+  <figure class="shot">
+    <img class="when-light" src="/assets/img/app-note-light.png" alt="A finished Syntheo note: decisions and next steps, with what came from your notes in green and what Syntheo completed in ink." width="1440" height="893">
+    <img class="when-dark" src="/assets/img/app-note-dark.png" alt="A finished Syntheo note: decisions and next steps, with what came from your notes in green and what Syntheo completed in ink." width="1440" height="893">
+  </figure>
+  <p class="caption">A finished note in Syntheo 0.7. The meeting was transcribed and summarised by models running on a local server.</p>
 </section>
 
 <section id="tea" class="tea section" aria-labelledby="tea-title">
@@ -172,6 +139,21 @@
       <h3>Synthesize</h3>
       <p>Your notes become the write-up. What comes from your notes stays green; what Syntheo adds is in ink, so you always see who wrote what.</p>
     </div>
+  </div>
+</section>
+
+<section id="folders" class="wrap section" aria-labelledby="folders-title">
+  <h2 id="folders-title" class="section-title center">Every meeting picks up where the last one ended</h2>
+  <p class="intro center">File your notes in project folders. Syntheo keeps a running thread of decisions, open points and tasks, and drafts the agenda of the next meeting from it.</p>
+  <div class="shots-2">
+    <figure>
+      <div class="shot"><img src="/assets/img/app-home.png" alt="Syntheo home screen: start a meeting, your folders, and the notes to resume." width="1440" height="893" loading="lazy"></div>
+      <figcaption class="caption">Home: your folders and the notes to resume.</figcaption>
+    </figure>
+    <figure>
+      <div class="shot"><img src="/assets/img/app-folder.png" alt="A project folder in Syntheo: the project thread with decisions, open points and open tasks, each linked to its meeting." width="1440" height="822" loading="lazy"></div>
+      <figcaption class="caption">A project folder and its thread, kept up to date by your local model.</figcaption>
+    </figure>
   </div>
 </section>
 
