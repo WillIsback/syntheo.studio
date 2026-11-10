@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syntheo · Private AI meeting notes that stay on your machine</title>
+<meta name="description" content="Syntheo is an open-source meeting notepad that transcribes and writes up your meetings with the AI models you run yourself. No account, no cloud, no bot in the call. Linux and Windows.">
+<link rel="canonical" href="https://syntheo.studio/">
+<link rel="alternate" hreflang="en" href="https://syntheo.studio/">
+<link rel="alternate" hreflang="fr" href="https://syntheo.studio/fr/">
+<link rel="alternate" hreflang="x-default" href="https://syntheo.studio/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Syntheo">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:url" content="https://syntheo.studio/">
+<meta property="og:title" content="What's said in the room stays in the room. Even the AI.">
+<meta property="og:description" content="Open-source meeting notes, transcribed and written up by the models you host. No account, no cloud, no bot in the call.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#316745">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/lang.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Syntheo",
+  "url": "https://syntheo.studio/",
+  "description": "Open-source meeting notepad that transcribes and writes up meetings with self-hosted AI models.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Linux, Windows",
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "softwareVersion": "0.7.0",
+  "downloadUrl": "https://github.com/WillIsback/Syntheo/releases/latest",
+  "codeRepository": "https://github.com/WillIsback/Syntheo",
+  "author": { "@type": "Person", "name": "William Derue", "url": "https://www.willisback.fr/en/About" }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wrap site-header">
+  <a class="brand" href="/" aria-label="Syntheo, home">
+    <img class="logo-light" src="/assets/img/logo-light.svg" alt="Syntheo" width="123" height="30">
+    <img class="logo-dark" src="/assets/img/logo-dark.svg" alt="Syntheo" width="123" height="30">
+  </a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="#tea">The story</a>
+    <a href="#how">How it works</a>
+    <a href="#models">Your models</a>
+    <a href="https://docs.syntheo.studio">Docs</a>
+    <a href="https://github.com/WillIsback/Syntheo">GitHub</a>
+  </nav>
+  <div class="header-actions">
+    <span class="lang"><strong aria-current="true">EN</strong> · <a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">FR</a></span>
+    <a class="btn btn-primary btn-sm" href="#download">Download</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="narrow hero">
+  <span class="pill">Open source · Beta 0.7 · Linux &amp; Windows</span>
+  <h1>What's said in the room <span class="green">stays in the room.</span></h1>
+  <p class="kicker">Even the AI.</p>
+  <p class="lead">Syntheo listens to your meeting, keeps your notes, and turns them into a clear write-up, using the models running on your own machine or your own servers. No account, no cloud, no bot in the call.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#download">Download for Linux or Windows</a>
+    <a class="btn btn-secondary" href="https://github.com/WillIsback/Syntheo">View the source</a>
+  </div>
+  <p class="prereq">Needs a speech-to-text and a language model you control: Ollama, vLLM, MLX, NVIDIA NIM, speaches…</p>
+</section>
+
+<section class="wrap preview" aria-label="Product preview">
+  <div class="window">
+    <div class="window-bar" aria-hidden="true">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span class="title">Weekly HR sync · November onboarding</span>
+    </div>
+    <div class="window-body">
+      <div class="note">
+        <div class="meta">Tue 29 Oct · 42 min · Claire M. · Mehdi B.</div>
+        <h2>Weekly HR sync · November onboarding</h2>
+        <div class="legend">
+          <span><span class="sw sw-notes" aria-hidden="true"></span>From your notes</span>
+          <span><span class="sw sw-ai" aria-hidden="true"></span>Completed by Syntheo</span>
+        </div>
+        <h3>Decisions</h3>
+        <ul>
+          <li><span class="green">On-site welcome moved to Thursday 7 Nov</span>, Claire books the room and sends the agenda by Monday.</li>
+          <li><span class="green">Laptops ready</span> before day one; IT confirmed 4 of 5 machines, the fifth arrives on the 6th.</li>
+        </ul>
+        <h3>Next steps</h3>
+        <ul>
+          <li>Mehdi shares the buddy list with the team leads (Wed).</li>
+          <li>Claire drafts the welcome e-mail and circulates it Friday.</li>
+        </ul>
+      </div>
+      <aside class="margin-transcript" aria-label="Live transcript">
+        <span class="label">Transcript</span>
+        <p><strong>Claire</strong>Can we push the welcome to Thursday? The room is taken Tuesday.</p>
+        <p><strong>Mehdi</strong>Thursday works. I'll get the buddy list out before then.</p>
+        <p><strong>Claire</strong>Good, I'll send the agenda Monday.</p>
+      </aside>
+    </div>
+    <div class="capsule" aria-hidden="true">
+      <span><span class="kanji">備</span>Prepare</span>
+      <span><span class="kanji">聴</span>Listen</span>
+      <span class="on"><span class="kanji">結</span>Summary</span>
+    </div>
+  </div>
+  <p class="caption">Illustration of a finished note.</p>
+</section>
+
+<section id="tea" class="tea section" aria-labelledby="tea-title">
+  <div class="watermark kanji" aria-hidden="true">茶</div>
+  <div class="wrap">
+    <span class="label">Syn · thé · o, what gathers around tea</span>
+    <h2 id="tea-title" class="section-title">Almost five centuries ago, tea merchants were already keeping meeting notes.</h2>
+    <p class="intro">In Japan, a tea gathering was a closed room, a moment prepared with care, and a record kept by someone who was there. Syntheo is built on the same three ideas.</p>
+    <div class="grid-3">
+      <div class="item">
+        <div class="kanji" aria-hidden="true">茶会</div>
+        <h3>Chakai · the gathering</h3>
+        <p>A host receives guests in a closed room. Only the invited are there. Your meeting is that room, and Syntheo only talks to the servers you invite.</p>
+      </div>
+      <div class="item">
+        <div class="kanji" aria-hidden="true">会記</div>
+        <h3>Kaiki · the record</h3>
+        <p>Afterwards, a guest writes down who came and what happened: a personal notebook, not minutes. Syntheo completes your notes; it never replaces them.</p>
+      </div>
+      <div class="item">
+        <div class="kanji" aria-hidden="true">一期一会</div>
+        <h3>Ichi-go ichi-e · once only</h3>
+        <p>One meeting, one time. Syntheo never keeps the audio: only your note remains, sealed with <span class="seal" aria-hidden="true">記</span> (“recorded”).</p>
+      </div>
+    </div>
+    <p><a href="https://docs.syntheo.studio/philosophy"><strong>Read the story behind the name</strong></a></p>
+  </div>
+</section>
+
+<section id="how" class="wrap section" aria-labelledby="how-title">
+  <h2 id="how-title" class="section-title center">One note, three moments</h2>
+  <p class="intro center">Like a tea gathering, a meeting has a before, a during and an after. Syntheo follows all three in the same note.</p>
+  <div class="grid-3">
+    <div class="item">
+      <div class="kanji" aria-hidden="true">備</div>
+      <h3>Prepare</h3>
+      <p>Jot an agenda and a few notes, file the note in its project folder. Syntheo recalls what was said in the last meetings of the same project.</p>
+    </div>
+    <div class="item">
+      <div class="kanji" aria-hidden="true">聴</div>
+      <h3>Listen</h3>
+      <p>It captures your microphone and your computer's audio, with a live transcript in the margin. Nobody joins the call.</p>
+    </div>
+    <div class="item">
+      <div class="kanji" aria-hidden="true">結</div>
+      <h3>Synthesize</h3>
+      <p>Your notes become the write-up. What comes from your notes stays green; what Syntheo adds is in ink, so you always see who wrote what.</p>
+    </div>
+  </div>
+</section>
+
+<section id="models" class="models section" aria-labelledby="models-title">
+  <div class="wrap">
+    <div class="text">
+      <h2 id="models-title" class="section-title">Your models, your servers.</h2>
+      <p>Syntheo is the notepad, not the service. Point it at the speech-to-text and language models you already run, on your laptop, on a workstation down the hall, or in your data centre.</p>
+      <p>A small speech model fits on a recent laptop; a medium language model runs on an RTX 3090, a Mac with MLX or a DGX Spark.</p>
+    </div>
+    <ul class="chips" aria-label="Supported model servers">
+      <li>Ollama</li><li>vLLM</li><li>MLX</li><li>NVIDIA NIM</li><li>speaches</li><li>Any OpenAI-compatible API</li>
+    </ul>
+  </div>
+</section>
+
+<section id="who" class="wrap section" aria-labelledby="who-title">
+  <h2 id="who-title" class="section-title center">Built for meetings that can't go to the cloud</h2>
+  <p class="intro center">When sending a recording to a third-party service takes months of approval, or is simply not allowed.</p>
+  <div class="grid-4">
+    <div class="item"><h3>Public servants</h3><p>Work notes stay on the agency's machines and network.</p></div>
+    <div class="item"><h3>Health &amp; legal</h3><p>Confidential conversations never reach an outside provider.</p></div>
+    <div class="item"><h3>Companies under GDPR</h3><p>No processor to declare, no data transfer to justify.</p></div>
+    <div class="item"><h3>Local-AI tinkerers</h3><p>Plug in the models you already run, keep full control.</p></div>
+  </div>
+</section>
+
+<section id="download" class="narrow download" aria-labelledby="download-title">
+  <h2 id="download-title" class="section-title">Try the beta</h2>
+  <p class="muted">Free and open source. Your feedback from real meetings shapes version 1.0.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="https://github.com/WillIsback/Syntheo/releases/latest">Linux (.AppImage, .deb)</a>
+    <a class="btn btn-primary" href="https://github.com/WillIsback/Syntheo/releases/latest">Windows (.exe, .msi)</a>
+  </div>
+  <a href="https://docs.syntheo.studio/quickstart">Read the quickstart</a>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="logo-light" src="/assets/img/logo-light.svg" alt="Syntheo" width="90" height="22">
+    <img class="logo-dark" src="/assets/img/logo-dark.svg" alt="Syntheo" width="90" height="22">
+    <span class="grow">Open source under MIT · Derived from Anarlog · No cookies, no analytics</span>
+    <a href="https://docs.syntheo.studio">Docs</a>
+    <a href="https://github.com/WillIsback/Syntheo">GitHub</a>
+    <span>Made by <a href="https://www.willisback.fr/en/About">William Derue</a></span>
+  </div>
+</footer>
+</body>
+</html>

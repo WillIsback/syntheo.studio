@@ -1,0 +1,170 @@
+/* Syntheo · 緑茶 Thé vert — jetons repris de packages/design-system (dépôt Syntheo). */
+:root {
+  --background: #fbfaf5;
+  --foreground: #262a24;
+  --card: #fffefa;
+  --muted: #efeee6;
+  --muted-foreground: #5c6357;
+  --faint: #8f968a;
+  --border: #e4e3d8;
+  --primary: #316745;
+  --primary-hover: #25553a;
+  --primary-foreground: #fbfaf5;
+  --recording: #c53d43;
+  --watermark: rgba(49, 103, 69, 0.06);
+  --shadow-capsule: 0 8px 28px rgba(38, 42, 36, 0.18);
+  --serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --sans: "Geist Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --kanji: "Syntheo Kanji", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1b1e1a;
+    --foreground: #ece9df;
+    --card: #232821;
+    --muted: #2c322a;
+    --muted-foreground: #a7ad9f;
+    --faint: #7b8274;
+    --border: #343a32;
+    --primary: #7dbf95;
+    --primary-hover: #97ceaa;
+    --primary-foreground: #13251a;
+    --recording: #e5675f;
+    --watermark: rgba(125, 191, 149, 0.07);
+    --shadow-capsule: 0 8px 28px rgba(0, 0, 0, 0.5);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--primary); }
+a:hover { color: var(--primary-hover); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 6px; }
+
+img { max-width: 100%; height: auto; }
+
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 10; background: var(--card); padding: 8px 12px; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 32px; }
+.narrow { max-width: 880px; margin: 0 auto; padding-inline: 32px; }
+@media (max-width: 640px) { .wrap, .narrow { padding-inline: 16px; } }
+
+.serif { font-family: var(--serif); font-weight: 500; }
+.kanji { font-family: var(--kanji); font-weight: 700; }
+.muted { color: var(--muted-foreground); }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); }
+.green { color: var(--primary); }
+
+/* Logo clair / sombre */
+img.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) { img.logo-light { display: none; } img.logo-dark { display: block; } }
+
+/* En-tête */
+.site-header { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding-block: 20px; }
+.site-header .brand img { height: 30px; width: auto; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; flex-grow: 1; font-size: 15px; }
+.site-nav a { color: var(--muted-foreground); text-decoration: none; }
+.site-nav a:hover { color: var(--foreground); }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.lang { font-size: 13px; color: var(--muted-foreground); }
+.lang a { color: var(--muted-foreground); }
+.lang strong { color: var(--foreground); }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px; border-radius: 16px; font-weight: 600; font-size: 15px; text-decoration: none; }
+.btn-sm { min-height: 44px; padding: 10px 18px; border-radius: 10px; font-size: 14px; }
+.btn-primary { background: var(--primary); color: var(--primary-foreground); }
+.btn-primary:hover { background: var(--primary-hover); color: var(--primary-foreground); }
+.btn-secondary { background: var(--muted); color: var(--foreground); }
+.btn-secondary:hover { color: var(--foreground); filter: brightness(0.97); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+/* Haut de page */
+.hero { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px; padding-block: 72px 40px; }
+.pill { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-foreground); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; }
+.hero h1 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 6vw, 68px); line-height: 1.04; letter-spacing: -0.015em; text-wrap: balance; }
+.hero .kicker { margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.6vw, 28px); color: var(--primary); }
+.hero .lead { margin: 0; max-width: 640px; font-size: 19px; color: var(--muted-foreground); }
+.hero .prereq { margin: 0; font-size: 13px; color: var(--muted-foreground); }
+
+/* Aperçu du produit */
+.preview { padding-block: 16px 80px; }
+.window { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; position: relative; }
+.window-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 13px; color: var(--muted-foreground); }
+.window-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+.window-bar .title { margin-left: 12px; }
+.window-body { display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 48px 120px; }
+@media (max-width: 640px) { .window-body { padding: 24px 20px 120px; } }
+.note { flex: 999 1 520px; min-width: 0; }
+.note .meta { font-size: 13px; color: var(--muted-foreground); }
+.note h2 { margin: 8px 0 20px; font-family: var(--serif); font-weight: 500; font-size: clamp(26px, 3vw, 36px); line-height: 1.1; }
+.note h3 { margin: 0 0 8px; font-family: var(--serif); font-weight: 500; font-size: 22px; }
+.note ul { margin: 0 0 20px; padding-left: 20px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted-foreground); margin-bottom: 18px; }
+.legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+.sw-notes { background: var(--primary); }
+.sw-ai { background: var(--foreground); }
+.margin-transcript { flex: 1 1 260px; min-width: 0; border-left: 1px solid var(--border); padding-left: 24px; font-size: 14px; color: var(--muted-foreground); display: flex; flex-direction: column; gap: 14px; }
+.margin-transcript p { margin: 0; }
+.margin-transcript strong { display: block; color: var(--foreground); }
+.capsule { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; align-items: center; gap: 6px; background: var(--primary); color: var(--primary-foreground); border-radius: 999px; padding: 8px 10px; box-shadow: var(--shadow-capsule); font-size: 14px; font-weight: 600; white-space: nowrap; }
+.capsule span { padding: 6px 12px; opacity: 0.75; }
+.capsule .on { background: var(--primary-foreground); color: var(--primary); border-radius: 999px; opacity: 1; }
+.capsule .kanji { font-size: 11px; margin-right: 6px; }
+.caption { margin: 10px 0 0; text-align: center; font-size: 12px; color: var(--faint); }
+
+/* Sections */
+.section { padding-block: 80px; }
+.section-title { margin: 0 0 16px; font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; text-wrap: balance; }
+.center { text-align: center; }
+.intro { margin: 0 auto 40px; max-width: 660px; color: var(--muted-foreground); font-size: 17px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .grid-3, .grid-4 { grid-template-columns: minmax(0, 1fr); } }
+.item { border-top: 1px solid var(--border); padding-top: 20px; }
+.item h3 { margin: 8px 0 6px; font-size: 18px; font-weight: 600; }
+.item p { margin: 0; color: var(--muted-foreground); }
+.item .kanji { font-size: 30px; color: var(--primary); line-height: 1.2; }
+
+/* Histoire du thé */
+.tea { position: relative; overflow: hidden; border-block: 1px solid var(--border); }
+.tea .watermark { position: absolute; right: -40px; top: -60px; font-size: 380px; line-height: 1; color: var(--watermark); pointer-events: none; }
+.tea .wrap { position: relative; }
+.tea .section-title { max-width: 780px; margin-top: 10px; }
+.tea .intro { margin-left: 0; }
+.seal { font-family: var(--kanji); font-weight: 700; color: var(--recording); }
+
+/* Modèles */
+.models { background: var(--muted); }
+.models .wrap { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+.models .text { flex: 1 1 420px; min-width: 0; }
+.models .text p { color: var(--muted-foreground); font-size: 17px; }
+.chips { flex: 1 1 420px; min-width: 0; display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.chips li { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; font-weight: 500; }
+
+/* Téléchargement */
+.download { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; padding-block: 48px 96px; }
+
+/* Pied de page */
+.site-footer { border-top: 1px solid var(--border); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; padding-block: 28px; font-size: 14px; color: var(--muted-foreground); }
+.site-footer img { height: 22px; width: auto; }
+.site-footer .grow { flex-grow: 1; }
+.site-footer a { color: var(--muted-foreground); }
