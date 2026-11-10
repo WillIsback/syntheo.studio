@@ -19,8 +19,25 @@
   color-scheme: light dark;
 }
 
+:root[data-theme="dark"] {
+  --background: #1b1e1a;
+  --foreground: #ece9df;
+  --card: #232821;
+  --muted: #2c322a;
+  --muted-foreground: #a7ad9f;
+  --faint: #7b8274;
+  --border: #343a32;
+  --primary: #7dbf95;
+  --primary-hover: #97ceaa;
+  --primary-foreground: #13251a;
+  --recording: #e5675f;
+  --watermark: rgba(125, 191, 149, 0.07);
+  --shadow-capsule: 0 8px 28px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #1b1e1a;
     --foreground: #ece9df;
     --card: #232821;
@@ -34,8 +51,11 @@
     --recording: #e5675f;
     --watermark: rgba(125, 191, 149, 0.07);
     --shadow-capsule: 0 8px 28px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
   }
 }
+
+:root[data-theme="light"] { color-scheme: light; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -73,7 +93,21 @@ img { max-width: 100%; height: auto; }
 
 /* Logo clair / sombre */
 img.logo-dark { display: none; }
-@media (prefers-color-scheme: dark) { img.logo-light { display: none; } img.logo-dark { display: block; } }
+:root[data-theme="dark"] img.logo-light { display: none; }
+:root[data-theme="dark"] img.logo-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) img.logo-light { display: none; }
+  :root:not([data-theme="light"]) img.logo-dark { display: block; }
+}
+
+/* Sélecteur de thème : automatique, clair, sombre */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 10px; background: transparent; color: var(--muted-foreground); cursor: pointer; }
+.theme-toggle:hover { color: var(--foreground); background: var(--muted); }
+.theme-toggle svg { width: 20px; height: 20px; }
+.theme-toggle .i-sun, .theme-toggle .i-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .i-auto, :root[data-theme="dark"] .theme-toggle .i-auto { display: none; }
+:root[data-theme="light"] .theme-toggle .i-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .i-moon { display: block; }
 
 /* En-tête */
 .site-header { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding-block: 20px; }

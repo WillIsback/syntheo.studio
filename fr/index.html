@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Syntheo · Vos comptes rendus de réunion par IA, sans quitter votre machine</title>
+<title>Syntheo · Le bloc-notes de réunion par IA qui ne quitte pas votre machine</title>
 <meta name="description" content="Syntheo est un bloc-notes de réunion open source : il transcrit et rédige le compte rendu avec les modèles d'IA que vous hébergez. Sans compte, sans cloud, sans robot dans l'appel. Linux et Windows.">
 <link rel="canonical" href="https://syntheo.studio/fr/">
 <link rel="alternate" hreflang="en" href="https://syntheo.studio/">
@@ -24,8 +24,9 @@
 <meta name="theme-color" content="#316745">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/fonts/fonts.css">
-<link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/lang.js"></script>
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<script src="/assets/js/lang.js?v=2"></script>
+<script src="/assets/js/theme.js?v=2"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,6 +63,11 @@
     <a href="https://github.com/WillIsback/Syntheo">GitHub</a>
   </nav>
   <div class="header-actions">
+    <button class="theme-toggle" type="button" data-label-auto="Thème : automatique (système). Passer en clair" data-label-light="Thème : clair. Passer en sombre" data-label-dark="Thème : sombre. Passer en automatique" aria-label="Thème : automatique (système). Passer en clair" title="Thème : automatique (système). Passer en clair">
+      <svg class="i-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+    </button>
     <span class="lang"><a href="/" hreflang="en" lang="en" data-lang="en">EN</a> · <strong aria-current="true">FR</strong></span>
     <a class="btn btn-primary btn-sm" href="#download">Télécharger</a>
   </div>
@@ -84,25 +90,25 @@
   <div class="window">
     <div class="window-bar" aria-hidden="true">
       <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      <span class="title">Point hebdo RH · onboarding de novembre</span>
+      <span class="title">Point hebdo RH · arrivées de novembre</span>
     </div>
     <div class="window-body">
       <div class="note">
         <div class="meta">mar. 29 oct. · 42 min · Claire M. · Mehdi B.</div>
-        <h2>Point hebdo RH · onboarding de novembre</h2>
+        <h2>Point hebdo RH · arrivées de novembre</h2>
         <div class="legend">
           <span><span class="sw sw-notes" aria-hidden="true"></span>Issu de vos notes</span>
           <span><span class="sw sw-ai" aria-hidden="true"></span>Complété par Syntheo</span>
         </div>
         <h3>Décisions</h3>
         <ul>
-          <li><span class="green">Accueil sur site décalé au jeudi 7 novembre</span>, Claire réserve la salle et envoie l'ordre du jour d'ici lundi.</li>
+          <li><span class="green">Accueil sur site décalé au jeudi 7 novembre</span>&#8239;: Claire réserve la salle et envoie l'ordre du jour d'ici lundi.</li>
           <li><span class="green">Ordinateurs prêts</span> avant le premier jour&#8239;; la DSI a confirmé 4 postes sur 5, le cinquième arrive le 6.</li>
         </ul>
         <h3>Prochaines étapes</h3>
         <ul>
           <li>Mehdi envoie la liste des parrains aux chefs d'équipe (mercredi).</li>
-          <li>Claire rédige le mail d'accueil et le fait circuler vendredi.</li>
+          <li>Claire rédige le courriel d'accueil et le fait circuler vendredi.</li>
         </ul>
       </div>
       <aside class="margin-transcript" aria-label="Transcription en direct">
@@ -126,17 +132,17 @@
   <div class="wrap">
     <span class="label">Syn · thé · o, ce qu'on rassemble autour du thé</span>
     <h2 id="tea-title" class="section-title">Il y a près de cinq siècles, des marchands de thé tenaient déjà leurs comptes rendus de réunion.</h2>
-    <p class="intro">Au Japon, une réunion de thé, c'était une pièce fermée, un moment préparé avec soin, et un carnet tenu par quelqu'un qui était là. Syntheo repose sur ces trois idées.</p>
+    <p class="intro">Au Japon, une réunion de thé réunissait trois choses&#8239;: une pièce fermée, un moment préparé avec soin et un carnet tenu par l'un des invités. Syntheo repose sur ces trois idées.</p>
     <div class="grid-3">
       <div class="item">
         <div class="kanji" aria-hidden="true">茶会</div>
         <h3>Chakai · la rencontre</h3>
-        <p>Un hôte reçoit ses invités dans une pièce fermée. Seuls les invités sont là. Votre réunion est cette pièce, et Syntheo ne parle qu'aux serveurs que vous invitez.</p>
+        <p>Un hôte reçoit ses invités dans une pièce fermée, à l'abri des regards. Votre réunion est cette pièce, et Syntheo ne parle qu'aux serveurs que vous y invitez.</p>
       </div>
       <div class="item">
         <div class="kanji" aria-hidden="true">会記</div>
         <h3>Kaiki · le carnet</h3>
-        <p>Ensuite, un invité note qui était là et ce qui s'est passé&#8239;: un carnet personnel, pas un procès-verbal. Syntheo complète vos notes, il ne les remplace jamais.</p>
+        <p>Ensuite, un invité note qui était là et ce qui s'est passé&#8239;: un carnet personnel, pas un procès-verbal. Syntheo complète vos notes&#8239;; il ne les remplace jamais.</p>
       </div>
       <div class="item">
         <div class="kanji" aria-hidden="true">一期一会</div>
@@ -150,22 +156,22 @@
 
 <section id="how" class="wrap section" aria-labelledby="how-title">
   <h2 id="how-title" class="section-title center">Une note, trois moments</h2>
-  <p class="intro center">Comme une réunion de thé, une réunion a un avant, un pendant et un après. Syntheo les suit tous les trois, dans la même note.</p>
+  <p class="intro center">Comme une réunion de thé, une réunion a un avant, un pendant et un après. Syntheo les suit tous les trois dans la même note.</p>
   <div class="grid-3">
     <div class="item">
       <div class="kanji" aria-hidden="true">備</div>
       <h3>Préparer</h3>
-      <p>Notez un ordre du jour et quelques idées, rangez la note dans son dossier projet. Syntheo rappelle ce qui s'est dit lors des dernières réunions du même projet.</p>
+      <p>Notez un ordre du jour et quelques idées, puis rangez la note dans son dossier projet. Syntheo rappelle ce qui s'est dit lors des dernières réunions du même projet.</p>
     </div>
     <div class="item">
       <div class="kanji" aria-hidden="true">聴</div>
       <h3>Écouter</h3>
-      <p>Il capte votre micro et le son de votre ordinateur, avec la transcription en direct dans la marge. Personne ne rejoint l'appel.</p>
+      <p>Syntheo capte votre micro et le son de votre ordinateur, avec la transcription en direct dans la marge. Personne ne rejoint l'appel.</p>
     </div>
     <div class="item">
       <div class="kanji" aria-hidden="true">結</div>
       <h3>Synthèse</h3>
-      <p>Vos notes deviennent le compte rendu. Ce qui vient de vos notes reste en vert, ce que Syntheo ajoute est à l'encre&#8239;: vous voyez toujours qui a écrit quoi.</p>
+      <p>Vos notes deviennent le compte rendu. Ce qui vient de vos notes reste en vert, et ce que Syntheo ajoute s'écrit à l'encre&#8239;: vous voyez toujours qui a écrit quoi.</p>
     </div>
   </div>
 </section>
@@ -174,7 +180,7 @@
   <div class="wrap">
     <div class="text">
       <h2 id="models-title" class="section-title">Vos modèles, vos serveurs.</h2>
-      <p>Syntheo est le bloc-notes, pas le service. Branchez-le sur les modèles de transcription et de langage que vous faites déjà tourner, sur votre ordinateur portable, sur une station de travail au bout du couloir ou dans votre centre de données.</p>
+      <p>Syntheo est le bloc-notes, pas le service. Branchez-le sur les modèles de transcription et de langage que vous faites déjà tourner, que ce soit sur votre ordinateur portable, sur une station de travail au bout du couloir ou dans votre centre de données.</p>
       <p>Un petit modèle de transcription tient sur un portable récent&#8239;; un modèle de langage moyen tourne sur une RTX 3090, un Mac avec MLX ou un DGX Spark.</p>
     </div>
     <ul class="chips" aria-label="Serveurs de modèles compatibles">
@@ -196,7 +202,7 @@
 
 <section id="download" class="narrow download" aria-labelledby="download-title">
   <h2 id="download-title" class="section-title">Essayer la bêta</h2>
-  <p class="muted">Gratuite et open source. Vos retours de vraies réunions façonnent la version 1.0.</p>
+  <p class="muted">La bêta est gratuite et open source. Vos retours, tirés de vraies réunions, façonneront la version 1.0.</p>
   <div class="actions">
     <a class="btn btn-primary" href="https://github.com/WillIsback/Syntheo/releases/latest">Linux (.AppImage, .deb)</a>
     <a class="btn btn-primary" href="https://github.com/WillIsback/Syntheo/releases/latest">Windows (.exe, .msi)</a>
