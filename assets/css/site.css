@@ -210,3 +210,24 @@ img.logo-dark, img.when-dark { display: none; }
 .shots-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
 .shots-2 figure { margin: 0; }
 @media (max-width: 800px) { .shots-2 { grid-template-columns: minmax(0, 1fr); } }
+
+/* Deux publics, RGPD */
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+@media (max-width: 760px) { .grid-2 { grid-template-columns: minmax(0, 1fr); } }
+.points { margin: 0 0 14px; padding-left: 20px; color: var(--muted-foreground); }
+.points li + li { margin-top: 8px; }
+.item p + p { margin-top: 10px; }
+code { font-size: 0.92em; overflow-wrap: anywhere; background: var(--muted); border-radius: 4px; padding: 1px 5px; }
+.note-box { margin-top: 48px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px 28px; }
+.note-box h3 { margin: 0 0 8px; font-size: 18px; font-weight: 600; }
+.note-box p { margin: 0; color: var(--muted-foreground); }
+.note-box p + p { margin-top: 10px; }
+@media (max-width: 640px) { .note-box { padding: 20px; } }
+
+/* Pages de texte (mentions légales, confidentialité) */
+.prose { padding-block: 56px 88px; }
+.prose h1 { margin: 0 0 24px; font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 4.6vw, 52px); line-height: 1.08; text-wrap: balance; }
+.prose h2 { margin: 40px 0 10px; font-size: 20px; font-weight: 600; }
+.prose p, .prose li { color: var(--muted-foreground); }
+.prose ul { padding-left: 20px; }
+.prose address { font-style: normal; color: var(--muted-foreground); }
