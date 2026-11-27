@@ -1,5 +1,5 @@
-// Langue : anglais par défaut ; un navigateur en français est envoyé sur /fr/
-// à sa première visite. Un choix explicite (lien EN/FR) est mémorisé et prime.
+// Langue : anglais par défaut ; un navigateur en français est envoyé sur la
+// version française de la page à sa première visite. Un choix explicite (lien EN/FR) est mémorisé et prime.
 (function () {
   var KEY = "syntheo-lang";
   var stored = null;
@@ -9,7 +9,10 @@
   if (!stored && !onFr) {
     var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
     if (String(langs[0] || "").toLowerCase().indexOf("fr") === 0) {
-      location.replace("/fr/" + location.hash);
+      // Version française de la page courante (lien hreflang="fr"), sinon l'accueil.
+      var alt = document.querySelector('link[rel="alternate"][hreflang="fr"]');
+      var target = alt ? new URL(alt.getAttribute("href"), location.href).pathname : "/fr/";
+      location.replace(target + location.hash);
       return;
     }
   }
