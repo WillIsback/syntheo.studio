@@ -231,3 +231,30 @@ code { font-size: 0.92em; overflow-wrap: anywhere; background: var(--muted); bor
 .prose p, .prose li { color: var(--muted-foreground); }
 .prose ul { padding-left: 20px; }
 .prose address { font-style: normal; color: var(--muted-foreground); }
+
+/* Comparatif */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.compare-scroll { max-width: 940px; margin: 0 auto; overflow-x: auto; background: var(--card); border: 1px solid var(--border); border-radius: 16px; }
+.compare { width: 100%; border-collapse: collapse; font-size: 15px; }
+.compare th, .compare td { padding: 13px 14px; border-bottom: 1px solid var(--border); text-align: center; vertical-align: middle; }
+.compare tbody tr:last-child > * { border-bottom: 0; }
+.compare thead th { font-size: 13px; font-weight: 600; color: var(--muted-foreground); white-space: nowrap; }
+.compare th[scope="row"] { text-align: left; font-weight: 500; padding-left: 24px; }
+.compare .us { background: var(--watermark); }
+.compare thead .us { color: var(--primary); }
+.mark { display: inline-block; width: 20px; height: 20px; vertical-align: middle; }
+.mark-yes { color: var(--primary); }
+.mark-no { color: var(--recording); }
+.mark-part { color: var(--muted-foreground); }
+.compare-legend { margin: 16px 0 0; text-align: center; font-size: 13px; color: var(--muted-foreground); }
+.compare-legend .mark { width: 16px; height: 16px; margin-top: -2px; }
+.compare-legend span { margin-inline: 8px; }
+.compare-note { max-width: 660px; margin: 12px auto 0; text-align: center; font-size: 14px; color: var(--muted-foreground); }
+@media (max-width: 640px) {
+  .compare { font-size: 13.5px; }
+  .compare th, .compare td { padding: 10px 5px; }
+  .compare th[scope="row"] { padding-left: 14px; padding-right: 8px; line-height: 1.35; }
+  .compare thead th { vertical-align: bottom; padding-block: 14px 10px; }
+  .compare thead th span { display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg); }
+  .mark { width: 18px; height: 18px; }
+}
